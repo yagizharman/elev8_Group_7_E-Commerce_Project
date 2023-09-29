@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
+import {ToastContainer, toast} from "react-toastify"
 
 const Cart = () => {
     //const productData = useSelector((state) => state.bazar.productData);
@@ -39,6 +40,13 @@ const Cart = () => {
             position="top-left"
             autoclose={3000}
             hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
             />
         </div>
         
