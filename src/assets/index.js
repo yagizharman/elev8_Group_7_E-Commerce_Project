@@ -1,5 +1,6 @@
-import logoDark from './logoDark.png';
+import logoDark from "./logoDark.png";
 import logoLight from './logoLight.png';
-import cartImg from './cartImg.png';
+import cartImg from './cartImg.png'
+import paymentLogo from './paymentLogo.png'
 
-export { logoDark, logoLight,cartImg };
+export {logoDark, logoLight,cartImg,paymentLogo};

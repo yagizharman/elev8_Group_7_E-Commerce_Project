@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 
-const ProductCard = ({ product }) => {
+const ProductsCard = ({ product }) => {
   const navigate = useNavigate();
   const id = product.title;
   const idString = (id) => {
@@ -61,4 +61,4 @@ const ProductCard = ({ product }) => {
     </div>
   );
 };
-export default ProductCard;
+export default ProductsCard;
