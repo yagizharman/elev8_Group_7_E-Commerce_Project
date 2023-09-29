@@ -1,6 +1,7 @@
 import React from "react";
 import { cartImg, logoDark } from "../assets";
 import { useSelector } from "react-redux";
+//import { Link } from "react-router-dom";
 
 const Header = () => {
   const productData = useSelector((state) => state.bazar.productData);
@@ -49,12 +50,25 @@ const Header = () => {
               Blog
             </li>
           </ul>
+
+          {/* <Link to="/cart">
+          <div className="relative">
+            <img className="w-8" src={cartImg} alt="cartImg" />
+            <span className="absolute w-8 top-2 left-0 text-sm flex items-center justify-center font-semibold font-titleFont">
+              {productData.length}
+            </span>
+          </div> 
+          </Link>*/}
+
+          {/*alttaki div üstekki gibi Link içinde olmalı ama hata veriyor */}
+
           <div className="relative">
             <img className="w-8" src={cartImg} alt="cartImg" />
             <span className="absolute w-8 top-2 left-0 text-sm flex items-center justify-center font-semibold font-titleFont">
               {productData.length}
             </span>
           </div>
+
           <img
             src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tingsrgb&w=1260&h=750&dpr=1"
             alt="userLogo"
