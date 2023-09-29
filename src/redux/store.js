@@ -1,5 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
+import bazarReducer from "./bazarSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    bazar: bazarReducer,
+  },
 });
