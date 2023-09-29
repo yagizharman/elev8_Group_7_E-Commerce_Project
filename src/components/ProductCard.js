@@ -4,8 +4,8 @@ import { BsArrowRight } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/bazarSlice";
 
-const ProductsCard = ({ product }) => {
-  const dispatch = useDispatch;
+const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const id = product.title;
   const idString = (id) => {
@@ -78,4 +78,4 @@ const ProductsCard = ({ product }) => {
     </div>
   );
 };
-export default ProductsCard;
+export default ProductCard;

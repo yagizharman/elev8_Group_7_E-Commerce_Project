@@ -15,7 +15,7 @@ const Products = () => {
        </div>
        <div className="max-w-screen-xl mx-auto">
         {/* TODO Implement this logic of productscard*/}
-        {/*<ProductsCard/> */} 
+        {/*<ProductCard/> */} 
        </div>
     </div>
   )
