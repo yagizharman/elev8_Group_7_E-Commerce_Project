@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { MdOutlineStar } from "react-icons/md";
 
 const Product = () => {
   const [details, setDetails] = useState({});
   const location = useLocation();
   useEffect(() => {
     setDetails(location.state.item);
-  }, []);
+  }, [location.state.item]);
   return (
+    
     <div>
       <div className="max-w-screen-xl mx-auto my-10 flex gap-10">
         <div className="w-2/5 relative">
