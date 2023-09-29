@@ -7,13 +7,13 @@ import { addToCart } from "../redux/bazarSlice";
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const id = product.title;
-  const idString = (id) => {
-    return String(id).toLowerCase().split(" ").join("");
+  const _id = product.title;
+  const idString = (_id) => {
+    return String(_id).toLowerCase().split(" ").join("");
   };
-  const rootId = idString(id);
+  const rootId = idString(_id);
   const handleDetails = () => {
-    navigate(`/product/$(rootId)`, {
+    navigate(`/product/${rootId}`, {
       state: {
         item: product,
       },
@@ -40,7 +40,8 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="flex justify-end gap-2 relative overflow-hidden w-28 text-sm">
             <div className="flex gap-2 transform group-hover:translate-x-24 transition-transform duration-500">
-              <p className="line-through text-gray-500">${product.price}</p>
+              <p className="line-through text-gray-500">${product.oldPrice}</p>
+              <p className="font-semibold">${product.price}</p>
             </div>
             <p
               onClick={() =>
