@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 import {ToastContainer, toast} from "react-toastify"
 
 const Cart = () => {
-    //const productData = useSelector((state) => state.bazar.productData);
-
+    const productData = useSelector((state) => state.bazar.productData);
+    const [totalAmt, setTotalAmt] = useState("");
+    useEffect(() => {
+        let price = 0;
+        productData.map((item)=> {
+            price += item.price * item.quantity;
+            return price;
+        })
+        setTotalAmt(price);
+    },[productData])
     return (
         <div>
             <img className="w-full h-60 object-cover"
@@ -19,7 +27,7 @@ const Cart = () => {
                         <p className="flex items-center gap-4 text-base">
                             Subtotal{" "}
                             <span className="font-titleFont font-bold text-lg">
-                                $ 200
+                                $ {totalAmt}
                             </span>
                         </p>
                         <p className="flex items-start gap-4 text-base">
@@ -30,7 +38,7 @@ const Cart = () => {
                         </p>
                         <p>
                             {" "}
-                            Total <span className="text-xl font-bold">$ 200</span>
+                            Total <span className="text-xl font-bold">$ {totalAmt}</span>
                         </p>
                         <button className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300">Proceed to Checkout</button>
                     </div>
