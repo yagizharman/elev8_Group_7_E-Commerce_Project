@@ -8,10 +8,6 @@ import {
 } from "firebase/auth";
 
 const Login = () => {
-    const handleGoogleLogin=()=>{
-
-    }
-
   return (
     <div className="w-full flex flex-col items-center justify-center gap-10 py-20">
         <div className="w-full flex items-center justify-center gap-10">
