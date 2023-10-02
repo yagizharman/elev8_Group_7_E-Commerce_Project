@@ -53,6 +53,8 @@ export const bazarSlice = createSlice({
       state.userInfo = null;
     },
     // =============== User End here ================
+
+
   },
 });
 
@@ -62,5 +64,7 @@ export const {
   resetCart,
   increamentQuantity,
   decrementQuantity,
+  addUser,
+  removeUser
 } = bazarSlice.actions;
 export default bazarSlice.reducer;

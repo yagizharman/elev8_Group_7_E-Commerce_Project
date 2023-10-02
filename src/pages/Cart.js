@@ -5,7 +5,10 @@ import {ToastContainer, toast} from "react-toastify"
 
 const Cart = () => {
     const productData = useSelector((state) => state.bazar.productData);
+    const userInfo = useSelector((state) => state.bazar.userInfo);
     const [totalAmt, setTotalAmt] = useState("");
+    const [payNow, setPayNow] = useState(false);
+
     useEffect(() => {
         let price = 0;
         productData.map((item)=> {
@@ -14,6 +17,15 @@ const Cart = () => {
         })
         setTotalAmt(price);
     },[productData])
+
+    const handleCheckout = () => {
+        if (userInfo) {
+            setPayNow(true);
+        } else {
+            toast.error("Please Sign In to Checkout")
+        }
+    }
+
     return (
         <div>
             <img
@@ -42,7 +54,9 @@ const Cart = () => {
                             {" "}
                             Total <span className="text-xl font-bold">$ {totalAmt}</span>
                         </p>
-                        <button className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300">Proceed to Checkout</button>
+                        <button onClick={handleCheckout} className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300">
+                            Proceed to Checkout
+                        </button>
                     </div>
                 </div>
             </div>
