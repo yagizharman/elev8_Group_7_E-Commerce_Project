@@ -1,7 +1,17 @@
-import axios from "axios"
+import axios from "axios";
 
 export async function productsData() {
-    const products = await axios.get("https://fakestoreapiserver.reactbd.com/products");
+  const products = await axios.get(
+    "https://fakestoreapiserver.reactbd.com/products"
+  );
+  /*.then(function (response) {
+      // handle success
+      console.log(response);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    });*/
 
-    return products
+  return products;
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import { cartImg, logoDark } from "../assets";
 import { useSelector } from "react-redux";
-//import { Link } from "react-router-dom";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 const Header = () => {
   const productData = useSelector((state) => state.bazar.productData);
   console.log(productData);
@@ -15,13 +14,13 @@ const Header = () => {
         <div className="flex items-center gap-8">
           <ul className="flex items-center gap-8">
             <Link to="/">
-            <li
-              className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2
+              <li
+                className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2
                         decoration-[1px] cursor-pointer duration-300
                         "
-            >
-              Home
-            </li>
+              >
+                Home
+              </li>
             </Link>
             <li
               className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2
@@ -53,23 +52,21 @@ const Header = () => {
             </li>
           </ul>
 
-    
-
-            <Link to="/cart">
-              <div className="relative">
-                <img className="w-8" src={cartImg} alt="cartImg" />
-                <span className="absolute w-8 top-2 left-0 text-sm flex items-center justify-center font-semibold font-titleFont">
-                  {productData.length}
-                </span>
-              </div>
-            </Link>
-            <Link to="/login">
-              <img
-                src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tingsrgb&w=1260&h=750&dpr=1"
-                alt="userLogo"
-                className="w-8 h-8 rounded-full "
-              />
-            </Link>
+          <Link to="/cart">
+            <div className="relative">
+              <img className="w-8" src={cartImg} alt="cartImg" />
+              <span className="absolute w-8 top-2 left-0 text-sm flex items-center justify-center font-semibold font-titleFont">
+                {productData.length}
+              </span>
+            </div>
+          </Link>
+          <Link to="/login">
+            <img
+              src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tingsrgb&w=1260&h=750&dpr=1"
+              alt="userLogo"
+              className="w-8 h-8 rounded-full "
+            />
+          </Link>
         </div>
       </div>
     </div>
