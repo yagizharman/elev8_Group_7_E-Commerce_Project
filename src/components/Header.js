@@ -22,7 +22,7 @@ const Header = () => {
                 Home
               </li>
             </Link>
-            <li
+            {/*<li
               className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2
                         decoration-[1px] cursor-pointer duration-300
                         "
@@ -49,7 +49,7 @@ const Header = () => {
                         "
             >
               Blog
-            </li>
+            </li>*/}
           </ul>
 
           <Link to="/cart">
