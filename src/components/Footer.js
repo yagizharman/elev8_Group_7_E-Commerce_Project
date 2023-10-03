@@ -20,7 +20,7 @@ const Footer = () => {
             {/*============ LogoIcon Start here ============ */}
             <div className='flex flex-col gap-5'>
                 <img  className="w-32" src={logoLight} alt='logoLight' />
-                <p className="text-white text-sm tracking-wide"> 2023 Store,Inc </p>
+                <p className="text-white text-sm tracking-wide"> 2023 Store, Inc </p>
                 <img className='w-56' src={paymentLogo} alt='paymentLogo' />
                 <div className='flex gap-4 text-lg text-gray-400'> 
                     <ImGithub className='hover:text-white duration-300 cursor-pointer'/>
@@ -34,7 +34,7 @@ const Footer = () => {
             {/*============ LogoIcon End here   ============ */}
             {/*============ LocateUs Start here ============ */}
             <div >
-            <h2 className='text-2x1 font-semibold text-white mb-3'>locate us </h2>
+            <h2 className='text-2x1 font-semibold text-white mb-3'>Locate us </h2>
             <div className='text-base flex flex-col gap-2'>
                 <p>Fisekhane Cad. Bakirkoy/Istanbul</p>
                 <p>Mobile: 0201 2739239  </p>
@@ -45,13 +45,13 @@ const Footer = () => {
             {/*============ LocateUs End here   ============ */}
             {/*============ Profile Start here  ============ */}
             <div>
-            <h2 className='text-2x1 font-semibold text-white mb-3'>profile </h2> 
+            <h2 className='text-2x1 font-semibold text-white mb-3'>Profile </h2> 
             <div className='flex flex-col gap-2 text-base'>
             <p className='flex items-center gap-3 hover:text-white duration-300 cursor-pointer'>
                 <span>
                     <BsPersonFill/> 
                 </span> 
-                    my account 
+                    Group #7 
              </p>
             <p className='flex items-center gap-3 hover:text-white duration-300 cursor-pointer'>
                 <span className='text-lg'>
