@@ -19,7 +19,7 @@ const Banner = () => {
     
   return (
     <div className="w-full h-auto overflow-x-hidden">
-      <div className="w-screen h-[650px] relative">
+      <div className="w-full relative">
         <div style={{transform:`translateX(-${currentSlide * 100}vw)`}} 
         className="w-[400vw] h-full flex transition-transform duration-1000">
             <img className="w-screen h-full object-cover" 
@@ -40,15 +40,19 @@ const Banner = () => {
             alt="ImageFour" 
             />
         </div>
-        <div className="absolute w-fit left-0 right-0 mx-auto flex gap-8 bottom-44">
-            <div onClick={prevSlide} className="w-14 h-12 border-[1px] border-gray-700 flex items-center justify-center
-            hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"> 
-               <HiArrowLeft /> 
-            </div>
-            <div onClick={nextSlide} className="w-14 h-12 border-[1px] border-gray-700 flex items-center justify-center
-            hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"> 
-                <HiArrowRight />
-            </div>
+        <div className="absolute inset-x-0 bottom-4 flex justify-center">
+          <div
+            onClick={prevSlide}
+            className="w-12 h-12 bg-gray-900/40 flex items-center justify-center rounded-full cursor-pointer hover:bg-gray-900 hover:bg-opacity-70 transition duration-300 mr-2"
+          >
+            <HiArrowLeft className="text-white text-2xl" />
+          </div>
+          <div
+            onClick={nextSlide}
+            className="w-12 h-12 bg-gray-900/40 flex items-center justify-center rounded-full cursor-pointer hover:bg-gray-900 hover:bg-opacity-70 transition duration-300"
+          >
+            <HiArrowRight className="text-white text-2xl" />
+          </div>
         </div>
       </div>  
     </div>
