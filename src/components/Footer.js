@@ -9,14 +9,14 @@ FaHome,
 }from "react-icons/fa";
 import {MdLocationOn} from "react-icons/md";
 import {BsPersonFill,BsPaypal} from "react-icons/bs";
-import { logoLight,paymentLogo } from '../assets';
+import { logoLight, paymentLogo } from '../assets';
 import { icons } from 'react-icons/lib';
 
 
 const Footer = () => {
   return (
     <div className="bg-black text-[#949494] py-20 font-titleFont">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-4">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 p-8">
             {/*============ LogoIcon Start here ============ */}
             <div className='flex flex-col gap-5'>
                 <img  className="w-32" src={logoLight} alt='logoLight' />
