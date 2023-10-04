@@ -15,7 +15,7 @@ const CartItem = () => {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.bazar.productData);
   return (
-    <div className="w-2/3 pr-10">
+    <div className="sm:w-2/3 pr-10">
       <div className="w-full ml-2">
         <h2 className="font-titleFont text-2xl">Shopping Cart</h2>
         <div>
@@ -40,10 +40,10 @@ const CartItem = () => {
                   />
                 </div>
                 <h2 className="w-52">{item.title}</h2>
-                <p className="w-10">${item.price}</p>
-                <div className="w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
-                  <p className="text-sm">Quantity</p>
-                  <div className="flex items-center gap-4 text-sm font-semibold">
+                <p className="w-5">${item.price}</p>
+                <div className="sm:w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
+                  <p className="hidden sm:block text-sm">Quantity</p>
+                  <div className="flex items-center gap-1 text-sm font-semibold">
                     <span
                       onClick={() =>
                         dispatch(
