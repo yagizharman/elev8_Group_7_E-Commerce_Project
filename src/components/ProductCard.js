@@ -40,7 +40,7 @@ const ProductCard = ({ product }) => {
               {product.title.substring(0, 15)}
             </h2>
           </div>
-          <div className="flex justify-end gap-2 relative overflow-hidden w-28 text-sm">
+          <div className="flex justify-between gap-2 relative overflow-hidden w-28 text-sm">
             <div className="flex gap-2 transform group-hover:translate-x-24 transition-transform duration-500">
               <p className="line-through text-gray-500">
                 {product.oldPrice && "$" + product.oldPrice}
@@ -69,7 +69,7 @@ const ProductCard = ({ product }) => {
             </p>
           </div>
           <div>
-            <p>{product.category}</p>
+            <p className="text-right text-sm">{product.category}</p>
           </div>
           <div className="absolute top-4 right-4">
             {product.oldPrice && (
