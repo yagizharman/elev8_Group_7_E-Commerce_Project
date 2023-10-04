@@ -23,7 +23,7 @@ const Product = () => {
             alt="productImg"
           />
           <div className="absolute top-4 right-0">
-            {details.isNew && (
+            {details.oldPrice && (
               <p className="bg-black text-white font-semibold font-titleFont px-8 py-1">
                 Sale
               </p>
@@ -35,7 +35,7 @@ const Product = () => {
             <h2 className="text-4xl font-semibold">{details.title}</h2>
             <div className="flex items-center gap-4 mt-3">
               <p className="line-through font-base text-gray-500">
-                ${details.oldPrice}
+                {details.oldPrice && "$" + details.oldPrice}
               </p>
               <p className="text-2xl font-medium text-gray-900">
                 ${details.price}
