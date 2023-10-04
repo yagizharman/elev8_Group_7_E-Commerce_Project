@@ -11,11 +11,12 @@ const Products = ({ products }) => {
         </h1>
         <span className="w-20 h-[3px] bg-black"> </span>
         <p className="max-w-[700px] text-gray-600 text-center">
-          Our project is a fantastic online market place where individuals can buy, sell,
-          trade, and collect one-of-a-kind products. The project is made by React.js, Tailwind, Stripe, Firebase, Redux technologies.
+          Our project is a fantastic online market place where individuals can
+          buy, sell, trade, and collect one-of-a-kind products. The project is
+          made by React.js, Tailwind, Stripe, Firebase, Redux technologies.
         </p>
       </div>
-      <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-15">
         {/* TODO Implement this logic of productscard*/}
         {/*<ProductCard/> */}
         {products.map((item) => (
