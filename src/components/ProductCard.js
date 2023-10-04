@@ -20,6 +20,7 @@ const ProductCard = ({ product }) => {
       },
     });
   };
+  console.log(product);
   return (
     <div className="group relative">
       <div
@@ -41,7 +42,9 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="flex justify-end gap-2 relative overflow-hidden w-28 text-sm">
             <div className="flex gap-2 transform group-hover:translate-x-24 transition-transform duration-500">
-              <p className="line-through text-gray-500">${product.oldPrice}</p>
+              <p className="line-through text-gray-500">
+                {product.oldPrice && "$" + product.oldPrice}
+              </p>
               <p className="font-semibold">${product.price}</p>
             </div>
             <p
@@ -69,7 +72,7 @@ const ProductCard = ({ product }) => {
             <p>{product.category}</p>
           </div>
           <div className="absolute top-4 right-4">
-            {product.isNew && (
+            {product.oldPrice && (
               <p className="bg-black text-white font-semibold font-titleFont px-6 py-1">
                 Sale
               </p>
