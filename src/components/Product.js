@@ -15,10 +15,10 @@ const Product = () => {
   }, [location.state.item]);
   return (
     <div>
-      <div className="max-w-screen-xl mx-auto my-10 flex gap-10">
-        <div className="w-2/5 relative">
+      <div className="max-w-screen-xl mx-auto my-10 sm:flex gap-10 px-12">
+        <div className="sm:w-2/5 w-5/5 relative">
           <img
-            className="w-full h-[550px] object-cover"
+            className="w-full md:h-[550px] object-contain"
             src={details.image}
             alt="productImg"
           />
@@ -30,7 +30,7 @@ const Product = () => {
             )}
           </div>
         </div>
-        <div className="w-3/5 flex flex-col justify-center gap-12">
+        <div className="sm:w-3/5 w-5/5 flex flex-col justify-center gap-12">
           <div>
             <h2 className="sm:text-sm md:text-xl lg:text-4xl font-semibold">
               {details.title}
