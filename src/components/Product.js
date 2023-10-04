@@ -56,7 +56,7 @@ const Product = () => {
           </div>
           <p className="text-base text-gray-500 -mt-3">{details.description}</p>
           <div className="flex gap-4">
-            <div className="flex items-center justify-between text-gray-500 gap-4 border p-3 overflow-hidden">
+            <div className="flex items-center justify-between text-gray-500 gap-4 border p-3 flex-wrap">
               <p className="text-sm">Quantity</p>
               <div className="flex items-center gap-4 text-sm font-semibold">
                 <button
@@ -76,24 +76,24 @@ const Product = () => {
                 </button>
               </div>
             </div>
+            <button
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    _id: details._id,
+                    title: details.title,
+                    image: details.image,
+                    price: details.price,
+                    quantity: baseQty,
+                    description: details.description,
+                  })
+                ) & toast.success(`${details.title} is added`)
+              }
+              className="sm:w-20 md:w-40 lg:w-60 bg-black text-white mr-10 py-3 px-6 active:bg-gray-800"
+            >
+              add to cart
+            </button>
           </div>
-          <button
-            onClick={() =>
-              dispatch(
-                addToCart({
-                  _id: details._id,
-                  title: details.title,
-                  image: details.image,
-                  price: details.price,
-                  quantity: baseQty,
-                  description: details.description,
-                })
-              ) & toast.success(`${details.title} is added`)
-            }
-            className="sm:w-20 md:w-40 lg:w-60 bg-black text-white py-3 px-6 active:bg-gray-800"
-          >
-            add to cart
-          </button>
           <p className="text-base text-gray-500">
             Category:{" "}
             <span className="font-medium capitalize">{details.category}</span>
