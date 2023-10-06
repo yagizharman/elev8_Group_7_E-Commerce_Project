@@ -16,9 +16,7 @@ const Products = ({ products }) => {
           made by React.js, Tailwind, Stripe, Firebase, Redux technologies.
         </p>
       </div>
-      <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-15">
-        {/* TODO Implement this logic of productscard*/}
-        {/*<ProductCard/> */}
+      <div className="max-w-screen-xl flex items-center justify-around text-gray-500 gap-4 border p-3 flex-wrap mx-auto mt-20 gap-15">
         {products.map((item) => (
           <ProductCard key={item._id} product={item} />
         ))}
