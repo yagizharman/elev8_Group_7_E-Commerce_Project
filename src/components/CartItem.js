@@ -15,8 +15,8 @@ const CartItem = () => {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.bazar.productData);
   return (
-    <div className="sm:w-2/3 pr-10 ml-20">
-      <div className="w-full ml-2">
+    <div className="sm:w-2/3 w-3/3 sm:pr-10 mx-20">
+      <div className="sm:w-full ">
         <h2 className="font-titleFont text-2xl">Shopping Cart</h2>
         <div>
           <div>
@@ -25,7 +25,7 @@ const CartItem = () => {
                 key={item._id}
                 className="sm:flex items-center justify-between gap-6 mt-6 "
               >
-                <div className="flex items-center gap-2">
+                <div className="items-center gap-2 flex">
                   <MdOutlineClose
                     onClick={() =>
                       dispatch(deleteItem(item._id)) &
@@ -34,16 +34,16 @@ const CartItem = () => {
                     className="text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300"
                   />
                   <img
-                    className="w-32 h-32 object-contain"
+                    className="sm:w-32 w-52 sm:h-32 h-52 object-contain"
                     src={item.image}
                     alt="productImg"
                   />
                 </div>
 
                 <h2 className="w-52 font-bold ">{item.title}</h2>
-                <div>
+                <div className="flex sm:block">
                   <p className="w-30">Unit ${item.price}</p>
-                  <div className="w-30 flex items-center justify-between text-gray-500 gap-4 border p-3">
+                  <div className="w-30 flex items-center sm:justify-between text-gray-500 gap-4 border p-3 mx-5 sm:mx-0">
                     <p className="hidden sm:block text-sm">Quantity</p>
                     <div className="flex items-center gap-1 text-sm font-semibold">
                       <span
