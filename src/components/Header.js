@@ -23,7 +23,13 @@ const Header = () => {
                         decoration-[1px] cursor-pointer duration-300
                         "
               >
-                Home
+                
+              <img
+                src={"https://cdn.discordapp.com/attachments/1155895318894882856/1159822298094768148/home.png?ex=65326bb0&is=651ff6b0&hm=fd401c1112de65ae86919ae58e655ce766f938a447e5dc3a9177a5be4aab4181&"}
+                alt="homeLogo"
+                className="w-8 h-8"
+            />
+
               </li>
             </Link>
           </ul>
@@ -41,7 +47,7 @@ const Header = () => {
               src={
                 userInfo
                   ? userInfo.image
-                  : "https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tingsrgb&w=1260&h=750&dpr=1"
+                  : "https://cdn.discordapp.com/attachments/704423371932303566/1159820096206798848/avatar.png?ex=653269a3&is=651ff4a3&hm=523fcc76b6d316c8ef627ab630d7ac7140bd3da8375398955da1f28056f6fa32&"
               }
               alt="userLogo"
               className="w-8 h-8 rounded-full mr-10"

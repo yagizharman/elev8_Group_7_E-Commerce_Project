@@ -15,7 +15,7 @@ const CartItem = () => {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.bazar.productData);
   return (
-    <div className="sm:w-2/3 pr-10">
+    <div className="sm:w-2/3 pr-10 ml-20">
       <div className="w-full ml-2">
         <h2 className="font-titleFont text-2xl">Shopping Cart</h2>
         <div>
@@ -23,7 +23,7 @@ const CartItem = () => {
             {productData.map((item) => (
               <div
                 key={item._id}
-                className="flex items-center justify-between gap-6 mt-6"
+                className="sm:flex items-center justify-between gap-6 mt-6 "
               >
                 <div className="flex items-center gap-2">
                   <MdOutlineClose
@@ -34,54 +34,57 @@ const CartItem = () => {
                     className="text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300"
                   />
                   <img
-                    className="w-32 h-32 object-cover"
+                    className="w-32 h-32 object-contain"
                     src={item.image}
                     alt="productImg"
                   />
                 </div>
-                <h2 className="w-52">{item.title}</h2>
-                <p className="w-5">${item.price}</p>
-                <div className="sm:w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
-                  <p className="hidden sm:block text-sm">Quantity</p>
-                  <div className="flex items-center gap-1 text-sm font-semibold">
-                    <span
-                      onClick={() =>
-                        dispatch(
-                          decrementQuantity({
-                            _id: item._id,
-                            title: item.title,
-                            image: item.image,
-                            price: item.price,
-                            quantity: 1,
-                            description: item.description,
-                          })
-                        )
-                      }
-                      className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black"
-                    >
-                      -
-                    </span>
-                    {item.quantity}
-                    <span
-                      onClick={() =>
-                        dispatch(
-                          increamentQuantity({
-                            _id: item._id,
-                            title: item.title,
-                            image: item.image,
-                            price: item.price,
-                            quantity: 1,
-                            description: item.description,
-                          })
-                        )
-                      }
-                      className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black"
-                    >
-                      +
-                    </span>
+
+                <h2 className="w-52 font-bold ">{item.title}</h2>
+                <div>
+                  <p className="w-30">Unit ${item.price}</p>
+                  <div className="w-30 flex items-center justify-between text-gray-500 gap-4 border p-3">
+                    <p className="hidden sm:block text-sm">Quantity</p>
+                    <div className="flex items-center gap-1 text-sm font-semibold">
+                      <span
+                        onClick={() =>
+                          dispatch(
+                            decrementQuantity({
+                              _id: item._id,
+                              title: item.title,
+                              image: item.image,
+                              price: item.price,
+                              quantity: 1,
+                              description: item.description,
+                            })
+                          )
+                        }
+                        className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black"
+                      >
+                        -
+                      </span>
+                      {item.quantity}
+                      <span
+                        onClick={() =>
+                          dispatch(
+                            increamentQuantity({
+                              _id: item._id,
+                              title: item.title,
+                              image: item.image,
+                              price: item.price,
+                              quantity: 1,
+                              description: item.description,
+                            })
+                          )
+                        }
+                        className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black"
+                      >
+                        +
+                      </span>
+                    </div>
                   </div>
+                  <p className="w-30">Total ${item.quantity * item.price}</p>
                 </div>
-                <p className="w-14">${item.quantity * item.price}</p>
               </div>
             ))}
           </div>
