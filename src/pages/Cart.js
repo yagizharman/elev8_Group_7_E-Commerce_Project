@@ -56,8 +56,7 @@ const Cart = () => {
             <p className="flex items-start gap-4 text-base">
               Shipping{" "}
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur laoreet nibh.
+                No shipping fee
               </span>
             </p>
             <p className="flex items-center gap-4 text-base">
