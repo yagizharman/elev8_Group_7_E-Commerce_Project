@@ -44,7 +44,7 @@ const Header = () => {
                   : "https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tingsrgb&w=1260&h=750&dpr=1"
               }
               alt="userLogo"
-              className="w-8 h-8 rounded-full "
+              className="w-8 h-8 rounded-full mr-10"
             />
           </Link>
           {userInfo && (
