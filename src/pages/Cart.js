@@ -61,8 +61,8 @@ const Cart = () => {
               </span>
             </p>
             <p className="flex items-center gap-4 text-base">
-              {" "}
-              Total <span className="text-xl font-bold">$ {totalAmt}</span>
+              {"    "}
+              Total <span className=" pl-6 text-xl font-bold font-titleFont">    $ {totalAmt}</span>
             </p>
             <button
               onClick={handleCheckout}
