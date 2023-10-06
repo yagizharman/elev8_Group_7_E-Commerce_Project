@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
         className="w-full h-96 cursor-pointer overflow-hidden"
       >
         <img
-          className="w-full h-full object-contain group-hover:scale-110 duration-500"
+          className="w-full h-full max-w-[360px] object-contain group-hover:scale-110 duration-500"
           src={product.image}
           alt="productImg"
         />
